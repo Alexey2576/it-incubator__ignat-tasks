@@ -3,27 +3,18 @@ import s from './AlternativeAffair.module.css'
 import {AffairType} from "../../../HW2";
 
 type AlternativeAffairType = {
-   // key не нужно типизировать
    id: number
    affair: AffairType
    deleteAffairCallback: (id: number) => void
-   changeCheckBox: (id: number) => void
+   changeCheckBoxCallback: (id: number) => void
 }
 
 function AlternativeAffair(props: AlternativeAffairType) {
    const style = {backgroundColor: "transparent"}
-   if (!props.affair.valueCheck) {
-      style.backgroundColor = "#aec0ff"
-   } else
-      style.backgroundColor = "rgba(197,209,255,0.59)"
+   !props.affair.valueCheck ? ( style.backgroundColor = "#aec0ff" ) : ( style.backgroundColor = "rgba(197,209,255,0.59)" )
 
-   const deleteCallback = () => {
-      props.deleteAffairCallback(props.affair._id)
-   }
-   const changeValueCheckBox = () => {
-      props.changeCheckBox(props.affair._id)
-   }
-
+   const deleteCallback = () => props.deleteAffairCallback(props.affair._id)
+   const changeValueCheckBox = () => props.changeCheckBoxCallback(props.affair._id)
 
    return (
       <div className={s.affair_block} style={style}>
@@ -46,7 +37,6 @@ function AlternativeAffair(props: AlternativeAffairType) {
             <span className={s.date}>{props.affair.date}</span>
          </div>
       </div>
-
    )
 }
 

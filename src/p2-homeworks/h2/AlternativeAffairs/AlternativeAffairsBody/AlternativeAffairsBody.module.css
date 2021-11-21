@@ -2,8 +2,64 @@
     width: 340px;
     margin: 0 auto;
 }
-.affairs_block {
 
+.add_card {
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.add_card_input {
+    margin-bottom: 5px;
+    font-size: 23px;
+    font-weight: 400;
+    border: 1px solid #6a6cf3;
+    border-radius: 15px;
+    width: 100%;
+    height: 100px;
+    padding: 5px 20px 5px 20px;
+    background-color: #e0e6ff;
+    resize: vertical;
+}
+
+.add_card_btn {
+    justify-content: left;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid #6a6cf3;
+    border-radius: 15px;
+    background-color: #ff9ab5;
+}
+.add_cardCreate {
+    align-items: center;
+}
+
+.add_card_btnCreate {
+    border-radius: 15px;
+    font-size: 23px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 5px 20px 5px 20px;
+    margin-right: 10px;
+    background-color: #9a9cff;
+    border: 1px solid #6a6cf3;
+}
+.add_cardClose {
+    font-size: 15px;
+    border: 1px solid #6a6cf3;
+    border-radius: 50%;
+    padding: 0;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    background-color: #9a9cff;
+}
+
+.add_card_btn_imgAdd {
+    width: 9%;
+    margin-right: 13px;
 }
 
 .btn_block {

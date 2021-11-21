@@ -75,7 +75,6 @@
 .checkbox:not(:disabled):active+label::before {
     background-color: #b3d7ff;
     border-color: #b3d7ff;
-
 }
 
 /* стили для чекбокса, находящегося в фокусе */

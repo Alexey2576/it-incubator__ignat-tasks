@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import s from './hw2.module.css'
 import AlternativeAffairs from "./AlternativeAffairs/AlternativeAffairs";
-// types
+import moment from "moment";
+
 export type AffairPriorityType = "high" | "middle" | "low"
 export type AffairType = {
    _id: number
@@ -12,7 +13,6 @@ export type AffairType = {
 }
 export type FilterType = "all" | AffairPriorityType
 
-// constants
 const defaultAffairs: Array<AffairType> = [
    {_id: 1, name: 'React', priority: 'high', date: "16.11.2021", valueCheck: true},
    {_id: 2, name: 'Anime', priority: 'low', date: "17.11.2021", valueCheck: false},
@@ -21,18 +21,17 @@ const defaultAffairs: Array<AffairType> = [
    {_id: 5, name: 'HTML & CSS', priority: 'middle', date: "20.11.2021", valueCheck: false},
 ]
 
-// pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => filter === 'all' ? affairs : affairs.filter(a => a.priority === filter)
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => affairs.filter(a => a._id !== _id)
-export const changeValueCheckBox = (affairs: Array<AffairType>, _id: number): Array<AffairType> => affairs.map(a => a._id === _id ? {...a, valueCheck: !a.valueCheck} : {...a})
-
+export const changeCheckBox = (affairs: Array<AffairType>, _id: number): Array<AffairType> => affairs.map(a => a._id === _id ? {...a, valueCheck: !a.valueCheck} : {...a})
+export const addNewCard = (affairs: Array<AffairType>, text: string): Array<AffairType> => [...affairs,{_id: 7, name: text, priority: "low", date: moment().format("DD.MM.YYYY"), valueCheck: false}]
 function HW2() {
    const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs);
    const [filter, setFilter] = useState<FilterType>('all');
    const filteredAffairs = filterAffairs(affairs, filter)
    const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
-   const changeCheckBox = (_id: number) => setAffairs(changeValueCheckBox(affairs, _id))
-
+   const changeCheckBoxCallback = (_id: number) => setAffairs(changeCheckBox(affairs, _id))
+   const addNewCardCallback = (text: string) => setAffairs(addNewCard(affairs, text))
    return (
       <div>
          {/*<div className={s.hw2}>*/}
@@ -45,13 +44,15 @@ function HW2() {
          {/*   />*/}
          {/*   <hr/>*/}
          {/*</div>*/}
+
+         {/*Личное творчество */}
          <div className={s.hw2}>
-            {/*для личного творчества, могу проверить*/}
             <AlternativeAffairs title={"ALTERNATIVE AFFAIRS"}
                                 data={filteredAffairs}
                                 setFilter={setFilter}
                                 deleteAffairCallback={deleteAffairCallback}
-                                changeCheckBox={changeCheckBox}
+                                changeCheckBoxCallback={changeCheckBoxCallback}
+                                addNewCardCallback={addNewCardCallback}
             />
             <hr/>
          </div>
