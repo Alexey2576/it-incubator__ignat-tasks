@@ -1,0 +1,23 @@
+.affairs {
+    width: 340px;
+    margin: 0 auto;
+}
+.affairs_block {
+
+}
+
+.btn_block {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.btn {
+    font-size: 18px;
+    background-color: #ffcda1;
+    width: 70px;
+    height: 40px;
+    border: 1px solid #ffbb7f;
+    border-radius: 15px;
+    cursor: pointer;
+}
