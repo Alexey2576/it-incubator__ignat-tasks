@@ -50,4 +50,4 @@ function Affairs(props: AffairsPropsType) {
    )
 }
 
-export default Affairs
+export default Affairs;

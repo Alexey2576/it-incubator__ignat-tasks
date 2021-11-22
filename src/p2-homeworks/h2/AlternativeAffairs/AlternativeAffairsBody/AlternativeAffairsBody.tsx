@@ -35,6 +35,7 @@ function AlternativeAffairsBody(props: AlternativeAffairsBody) {
    const addCard = () => props.addNewCardCallback(valueTextArea)
    const setChangeValueTextArea = (e: ChangeEvent<HTMLTextAreaElement>) => {setValueTextArea(e.currentTarget.value)}
    const setVisibleSomeBlocks = () => setIsVisible(!isVisible)
+
    let styleTextArea = {
       display: "none"
    }
@@ -44,6 +45,7 @@ function AlternativeAffairsBody(props: AlternativeAffairsBody) {
    let styleButtonAddCard = {
       display: "none"
    }
+
    if (isVisible) {
       styleTextArea.display = "flex"
       styleButtonAddNewCard.display = "none"

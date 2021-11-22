@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, MouseEvent, useState} from 'react'
 import Greeting from './Greeting'
+import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+   users: UserType[]
+   addUserCallback: (name: string) => void
 }
 
 // более простой и понятный для новичков
@@ -12,27 +13,50 @@ type GreetingContainerPropsType = {
 // более современный и удобный для про :)
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+   const [name, setName] = useState<string>('')
+   const [error, setError] = useState<string>('')
+   const [isDisabled, setIsDisabled] = useState<boolean>(true)
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('') // need to fix
-    }
-    const addUser = () => {
-        alert(`Hello  !`) // need to fix
-    }
+   const setKeyPressCallback = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.charCode === 32) {
+         setError("Username should`t contain spaces");
+         setIsDisabled(true);
+      } else {
+         setError("")
+         setIsDisabled(false);
+      }
+   }
+   const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+      if (error === "") {
+         setName(e.currentTarget.value)
+         setIsDisabled(false)
+      }
+   }
+   const addUser = (e: MouseEvent<HTMLButtonElement>) => {
+      if (name !== "") {
+         alert(`Hello ${name}!`)
+         addUserCallback(name)
+         setName("")// need to fix
+         setIsDisabled(true)
+      } else {
+         setError("Enter username")
+         setIsDisabled(true)
+      }
+   }
 
-    const totalUsers = 0 // need to fix
+   const totalUsers = users.length // need to fix
 
-    return (
-        <Greeting
-            name={name}
-            setNameCallback={setNameCallback}
-            addUser={addUser}
-            error={error}
-            totalUsers={totalUsers}
-        />
-    )
+   return (
+      <Greeting
+         name={name}
+         setNameCallback={setNameCallback}
+         setKeyPressCallback={setKeyPressCallback}
+         addUser={addUser}
+         error={error}
+         totalUsers={totalUsers}
+         isDisabled={isDisabled}
+      />
+   )
 }
 
 export default GreetingContainer

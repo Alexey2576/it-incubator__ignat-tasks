@@ -7,7 +7,7 @@ export type AffairPriorityType = "high" | "middle" | "low"
 export type AffairType = {
    _id: number
    name: string
-   priority: string
+   priority: AffairPriorityType
    date: string
    valueCheck: boolean
 }
