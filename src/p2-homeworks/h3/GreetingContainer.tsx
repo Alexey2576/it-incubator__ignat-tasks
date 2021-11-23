@@ -14,16 +14,27 @@ type GreetingContainerPropsType = {
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
    const [name, setName] = useState<string>('')
-   const [error, setError] = useState<string>('')
+   const [error, setError] = useState<string>("error")
    const [isDisabled, setIsDisabled] = useState<boolean>(true)
 
    const setKeyPressCallback = (e: React.KeyboardEvent<HTMLInputElement>) => {
-      if (e.charCode === 32) {
-         setError("Username should`t contain spaces");
+      console.log(e.keyCode === 8)
+      if (e.charCode === 32 && name.length === 0) {
+         setError("Error text");
          setIsDisabled(true);
+      }
+      else if (e.charCode === 32) {
+         setError("Error text");
+         setIsDisabled(false);
       } else {
          setError("")
          setIsDisabled(false);
+      }
+      if (e.charCode === 13 && name.length !== 0) {
+         alert(`Hello ${name}!`)
+         addUserCallback(name)
+         setName("")// need to fix
+         setIsDisabled(true)
       }
    }
    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
@@ -32,7 +43,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
          setIsDisabled(false)
       }
       if (e.currentTarget.value.length === 0) {
-         setError("Enter username")
+         setError("Error text");
          setIsDisabled(true)
       }
    }

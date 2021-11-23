@@ -1,8 +1,155 @@
-.someClass {
-    background-color: aquamarine;
+* {
+    box-sizing: border-box;
+}
+
+.greeting {
+    margin: 20px 20px;
+    display: flex;
+}
+
+.inputBlock {
+    margin-right: 20px;
+}
+
+/*===========================================*/
+.inputTextBlock {
+    display: flex;
+    align-items: center;
+}
+
+.imgSuccess {
+    position: absolute;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    /*margin-right: 8px;*/
+}
+
+.label {
+    position: relative;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A3A3A;
+    margin-left: 24px;
+}
+
+/*===========================================*/
+.input {
+    height: 40px;
+    width: 328px;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 4px 0;
+    background-color: #FFFFFF;
+    border: 1px solid #757575;
+
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A3A3A;
+
+}
+
+
+.success {
+    border: 1px solid #06826B;
 }
 
 .error {
-    border: 1px solid red;
-    background-color: #ff7171;
+    background-color: #FCE9E9;;
+    border: 2px solid #CD3232;
+}
+
+input:focus {
+    box-shadow: 0 0 4px 4px rgba(96, 56, 208, 0.6);
+    border: 1px solid #757575;
+}
+
+.input:active {
+    border: 2px solid #6038D0;
+}
+input:disabled {
+    background: #DDDDDD;
+}
+
+/*===========================================*/
+.errorBlock {
+    display: flex;
+    align-items: center;
+}
+
+.imgError {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.textError {
+    display: block;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #757575;
+}
+
+/*===========================================*/
+.buttonBlock {
+    margin-top: 28px;
+}
+
+.button {
+    height: 40px;
+    width: 121px;
+    border-radius: 5px;
+    padding: 2px;
+    font-family: Marianne, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #2b2b3a;
+    color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 0 4px 4px rgba(96, 56, 208, 0.6);
+    border: 1px solid #757575;
+    background-color: transparent;
+    color: #18182f;
+    font-weight: bold;
+    /*filter: drop-shadow(0px 4px 5px rgba(29, 36, 56, 0.33)) drop-shadow(0px 3px 14px rgba(29, 36, 56, 0.35)) drop-shadow(0px 8px 10px rgba(30, 38, 58, 0.35));*/
+}
+
+.button:active {
+    background-color: rgb(65, 39, 138);
+    color: #fff;
+    font-weight: normal;
+
+}
+
+.button:disabled {
+    border: none;
+    background-color: rgba(25, 32, 56, 0.12);
+    box-shadow: none;
+    font-weight: normal;
+    color: #fff;
+}
+
+.total {
+    font-family: Marianne, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
 }
