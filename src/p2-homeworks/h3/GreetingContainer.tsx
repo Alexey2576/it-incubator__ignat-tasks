@@ -31,15 +31,16 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
          setName(e.currentTarget.value)
          setIsDisabled(false)
       }
+      if (e.currentTarget.value.length === 0) {
+         setError("Enter username")
+         setIsDisabled(true)
+      }
    }
    const addUser = (e: MouseEvent<HTMLButtonElement>) => {
       if (name !== "") {
          alert(`Hello ${name}!`)
          addUserCallback(name)
          setName("")// need to fix
-         setIsDisabled(true)
-      } else {
-         setError("Enter username")
          setIsDisabled(true)
       }
    }
