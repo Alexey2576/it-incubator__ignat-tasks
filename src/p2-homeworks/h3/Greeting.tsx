@@ -23,7 +23,7 @@ const Greeting: React.FC<GreetingPropsType> = (
       <div className={s.greeting}>
          <div className={s.inputBlock}>
             <div className={s.inputTextBlock}>
-               { error === "" && <img src={success} alt="success" className={s.imgSuccess}/> }
+               { error === "" && name.length !==0 && <img src={success} alt="success" className={s.imgSuccess}/> }
                <label htmlFor="input" className={s.label}>Label</label>
             </div>
             <input value={name}
