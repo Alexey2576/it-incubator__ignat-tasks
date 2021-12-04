@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/t-incubator__ignat-tasks/static/css/main.03e44f1c.chunk.css",
+    "main.js": "/t-incubator__ignat-tasks/static/js/main.c4b402a7.chunk.js",
+    "main.js.map": "/t-incubator__ignat-tasks/static/js/main.c4b402a7.chunk.js.map",
+    "runtime-main.js": "/t-incubator__ignat-tasks/static/js/runtime-main.d9aaa595.js",
+    "runtime-main.js.map": "/t-incubator__ignat-tasks/static/js/runtime-main.d9aaa595.js.map",
+    "static/js/2.d6e1b231.chunk.js": "/t-incubator__ignat-tasks/static/js/2.d6e1b231.chunk.js",
+    "static/js/2.d6e1b231.chunk.js.map": "/t-incubator__ignat-tasks/static/js/2.d6e1b231.chunk.js.map",
+    "index.html": "/t-incubator__ignat-tasks/index.html",
+    "static/css/main.03e44f1c.chunk.css.map": "/t-incubator__ignat-tasks/static/css/main.03e44f1c.chunk.css.map",
+    "static/js/2.d6e1b231.chunk.js.LICENSE.txt": "/t-incubator__ignat-tasks/static/js/2.d6e1b231.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9aaa595.js",
+    "static/js/2.d6e1b231.chunk.js",
+    "static/css/main.03e44f1c.chunk.css",
+    "static/js/main.c4b402a7.chunk.js"
+  ]
+}
