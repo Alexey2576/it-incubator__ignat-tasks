@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './Header'
-import Content from './Routes'
+import Header from './Header/Header'
+import Content from './Content/Content'
 import {HashRouter} from "react-router-dom";
 
 function HW5() {

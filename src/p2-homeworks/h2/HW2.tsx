@@ -35,8 +35,8 @@ function HW2() {
    const addNewCardCallback = (text: string) => setAffairs(addNewCard(affairs, text))
    return (
       <div>
+         <h2>Homework 2</h2>
          <div className={s.hw2}>
-            <hr/>
             <h3 className={s.title}>AFFAIRS</h3>
             <Affairs
                data={filteredAffairs}

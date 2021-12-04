@@ -21,8 +21,7 @@ function HW4() {
 
    return (
       <div>
-         <hr/>
-         homeworks 4
+         <h2>Homework 4</h2>
 
          <div className={s.column}>
             <SuperInputText

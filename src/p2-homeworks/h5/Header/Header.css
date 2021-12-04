@@ -1,0 +1,18 @@
+.header {
+    text-align: center;
+    margin: 30px;
+}
+
+.link {
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #18182f;
+}
+
+.active {
+    color: #ff7171;
+    text-decoration: underline;
+}
+

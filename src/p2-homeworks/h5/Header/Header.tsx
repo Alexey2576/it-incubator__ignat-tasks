@@ -1,20 +1,20 @@
 import React from 'react'
 import {NavLink} from "react-router-dom";
-import {PATH} from "./Routes";
+import {PATH} from "../Content/Content";
+import './Header.css'
 
 function Header() {
    return (
-      <div>
-         <NavLink to={PATH.PRE_JUNIOR}>
+      <div className="header">
+         <NavLink className="link" to={PATH.PRE_JUNIOR}>
             Pre-junior
          </NavLink>
-         <NavLink to={PATH.JUNIOR}>
+         <NavLink className="link" to={PATH.JUNIOR}>
             Junior
          </NavLink>
-         <NavLink to={PATH.JUNIOR_PLUS}>
+         <NavLink className="link" to={PATH.JUNIOR_PLUS}>
             Junior-plus
          </NavLink>
-
       </div>
    )
 }
