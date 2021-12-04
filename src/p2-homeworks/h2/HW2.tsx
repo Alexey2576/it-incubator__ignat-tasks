@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import s from './hw2.module.css'
 import AlternativeAffairs from "./AlternativeAffairs/AlternativeAffairs";
 import moment from "moment";
+import Affairs from "./Affairs/Affairs";
 
 export type AffairPriorityType = "high" | "middle" | "low"
 export type AffairType = {
@@ -34,16 +35,16 @@ function HW2() {
    const addNewCardCallback = (text: string) => setAffairs(addNewCard(affairs, text))
    return (
       <div>
-         {/*<div className={s.hw2}>*/}
-         {/*   <hr/>*/}
-         {/*   <h3 className={s.title}>AFFAIRS</h3>*/}
-         {/*   <Affairs*/}
-         {/*      data={filteredAffairs}*/}
-         {/*      setFilter={setFilter}*/}
-         {/*      deleteAffairCallback={deleteAffairCallback}*/}
-         {/*   />*/}
-         {/*   <hr/>*/}
-         {/*</div>*/}
+         <div className={s.hw2}>
+            <hr/>
+            <h3 className={s.title}>AFFAIRS</h3>
+            <Affairs
+               data={filteredAffairs}
+               setFilter={setFilter}
+               deleteAffairCallback={deleteAffairCallback}
+            />
+            <hr/>
+         </div>
 
          {/*Личное творчество */}
          <div className={s.hw2}>

@@ -26,3 +26,12 @@
     cursor: pointer;
     background-color: #9a9cff;
 }
+
+.btn {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid #6a6cf3;
+    background-color: #9a9cff;
+}

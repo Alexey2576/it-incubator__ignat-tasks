@@ -24,7 +24,7 @@ const Greeting: React.FC<GreetingPropsType> = (
          <div className={s.inputBlock}>
             <div className={s.inputTextBlock}>
                { error === "" && name.length !==0 && <img src={success} alt="success" className={s.imgSuccess}/> }
-               <label htmlFor="input" className={s.label}>Label</label>
+               <label htmlFor="input" className={s.label}>Please! Enter your email address!</label>
             </div>
             <input value={name}
                    onChange={setNameCallback}

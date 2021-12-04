@@ -11,7 +11,7 @@ type AlternativeAffairType = {
 
 function AlternativeAffair(props: AlternativeAffairType) {
    const style = {backgroundColor: "transparent"}
-   !props.affair.valueCheck ? ( style.backgroundColor = "#aec0ff" ) : ( style.backgroundColor = "rgba(197,209,255,0.59)" )
+   !props.affair.valueCheck ? (style.backgroundColor = "#aec0ff") : (style.backgroundColor = "rgba(197,209,255,0.59)")
 
    const deleteCallback = () => props.deleteAffairCallback(props.affair._id)
    const changeValueCheckBox = () => props.changeCheckBoxCallback(props.affair._id)

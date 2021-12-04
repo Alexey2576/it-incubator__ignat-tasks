@@ -18,7 +18,6 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
    const [isDisabled, setIsDisabled] = useState<boolean>(true)
 
    const setKeyPressCallback = (e: React.KeyboardEvent<HTMLInputElement>) => {
-      console.log(e.keyCode === 8)
       if (e.charCode === 32 && name.length === 0) {
          setError("Error text");
          setIsDisabled(true);
