@@ -19,7 +19,7 @@ function Content() {
             <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
             <Route path={PATH.JUNIOR} element={<Junior/>}/>
             <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
-            <Route element={<Error404/>}/>
+            <Route path='/404'element={<Error404/>}/>
          </Routes>
       </div>
    )
