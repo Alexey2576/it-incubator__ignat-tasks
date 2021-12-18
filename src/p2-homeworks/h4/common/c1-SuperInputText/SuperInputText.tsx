@@ -44,6 +44,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
    const finalInputClassName = error ? `${s.errorInput} ${s.superInput}` : s.superInput + " " + className
    const finalLabelClassName = error ? `${s.superLabel__error} ${s.superLabel}` : s.superLabel
    const finalBarClassName = error ? `${s.superBar__error} ${s.superBar}` : s.superBar
+
    return (
       <div className={s.superGroup}>
          <input

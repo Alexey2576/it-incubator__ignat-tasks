@@ -1,0 +1,21 @@
+.hw6 {
+    text-align: center;
+}
+
+.spanClassName {
+    font-size:  30px;
+}
+.superEditableSpan {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.group {
+    display: grid;
+    justify-content: center;
+}
+
+.btn {
+    margin-top: 0;
+}
