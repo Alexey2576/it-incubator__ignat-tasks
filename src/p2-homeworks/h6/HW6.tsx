@@ -23,7 +23,7 @@ function HW6() {
             <SuperEditableSpan value={value}
                                onChangeText={setValue}
                                className={"superEditableSpan"}
-                               spanProps={{children: value ? undefined : 'Click and enter text...'}}/>
+                               spanProps={{children: value ? undefined : 'Click  and enter text...'}}/>
          </div>
          <SuperButton onClick={save} className={"btn"}>save</SuperButton>
          <SuperButton onClick={restore} className={"btn"}>restore</SuperButton>

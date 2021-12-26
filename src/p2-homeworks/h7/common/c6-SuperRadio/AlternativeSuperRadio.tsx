@@ -1,9 +1,46 @@
-import React from 'react'
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
+import "./AlternativeSuperRadio.css"
 
-function AlternativeSuperRadio() {
-    return (
-        <input/>
-    )
+type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+
+type AlternativeSuperRadioType = DefaultRadioPropsType & {
+   options?: string[]
+   onChangeOptions?: (option: string) => void
 }
 
-export default AlternativeSuperRadio
+
+export const AlternativeSuperRadio: React.FC<AlternativeSuperRadioType> = (
+   {
+      value, name,
+      options,
+      onChange,
+      onChangeOptions
+   }
+) => {
+
+   const onChangeOptionsHandler = (e: ChangeEvent<HTMLInputElement>) => {
+      onChange && onChange(e)
+      onChangeOptions && onChangeOptions(e.currentTarget.value)
+   }
+
+   const mappedOptions = options ? options.map((o, i) => (
+      <div className="alt_super_rad">
+         <label className="rad-label" key={name + "-" + i}>
+            <input type="radio"
+                   className="rad-input"
+                   name={name}
+                   value={value}
+                   checked
+                   onChange={onChangeOptionsHandler}/>
+            <div className="rad-design"> </div>
+            <div className="rad-text">{o}</div>
+         </label>
+      </div>
+   )) : []
+
+   return (
+      <>
+         {mappedOptions}
+      </>
+   )
+}
