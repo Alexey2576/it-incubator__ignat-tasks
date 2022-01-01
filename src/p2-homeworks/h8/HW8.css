@@ -1,0 +1,52 @@
+.HW8 {
+    text-align: center;
+}
+
+.wrapper {
+    min-height: 270px;
+    height: 100%;
+}
+.peoples {
+    width: 400px;
+    border: 2px solid #18182f;
+    padding: 10px;
+    margin: 10px auto 5px;
+}
+.peoples__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-bottom: 5px;
+}
+.peoples__header__name, .peoples__header__age{
+    font-weight: 700;
+    font-size: 20px;
+    color: #0b76ef;
+}
+
+.people {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 0 10px 5px 10px;
+    border-bottom: 1px solid #3d5870;
+}
+.people:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.people__name {
+    font-weight: 700;
+}
+
+.people__age {
+    color: #ff7171;
+}
+
+.btn {
+    padding-top: 2px;
+    width: 120px;
+    margin: 5px 10px;
+}
