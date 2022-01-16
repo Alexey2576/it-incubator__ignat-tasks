@@ -1,0 +1,14 @@
+.HW10 {
+    text-align: center;
+}
+
+.loading_block {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 200px;
+}

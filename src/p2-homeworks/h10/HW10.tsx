@@ -1,38 +1,44 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {useDispatch, useSelector} from "react-redux";
+import {AppStoreType} from "./bll/store";
+import {Dispatch} from "redux";
+import {ActionsType, loadingAC, StateType} from "./bll/loadingReducer";
+import './HW10.css'
+import preloader from '../h10/assets/preloader.svg'
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false
+   const {isLoading} = useSelector<AppStoreType, StateType>(store => store.loading)
+   const dispatch = useDispatch<Dispatch<ActionsType>>()
 
-    const setLoading = () => {
-        // dispatch
-        // setTimeout
-        console.log('loading...')
-    };
+   const setLoading = () => {
+      dispatch(loadingAC(true))
+      console.log('loading...')
+      setTimeout(() => {
+         dispatch(loadingAC(false))
+      }, 2000)
+   };
 
-    return (
-        <div>
-            <hr/>
-            homeworks 10
+   return (
+      <div className={"HW10"}>
+         <h2>homeworks 10</h2>
 
-            {/*should work (должно работать)*/}
-            {loading
-                ? (
-                    <div>крутилка...</div>
-                ) : (
-                    <div>
-                        <SuperButton onClick={setLoading}>set loading...</SuperButton>
-                    </div>
-                )
-            }
+         <div className={"loading_block"}>
+            {isLoading
+               ? <div className={"loading"}>
+                  <img src={preloader} alt="preloader"></img>
+               </div>
+               : <div className={"btn"}>
+                  <SuperButton onClick={setLoading}>Set loading</SuperButton>
+               </div>}
+         </div>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<Alternative/>*/}
-            <hr/>
-        </div>
-    )
+         <hr/>
+         {/*для личного творчества, могу проверить*/}
+         {/*<Alternative/>*/}
+         <hr/>
+      </div>
+   )
 }
 
 export default HW10

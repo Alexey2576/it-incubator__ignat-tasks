@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import './HW9.css'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
@@ -24,7 +25,7 @@ function Clock() {
     const stringDate = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`
 
     return (
-        <div>
+        <div className={"clock"}>
             <div
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
@@ -37,9 +38,11 @@ function Clock() {
                     {stringDate}
                 </div>
             )}
+            <div>
+               <SuperButton onClick={start}>start</SuperButton>
+               <SuperButton onClick={stop}>stop</SuperButton>
+            </div>
 
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
 
         </div>
     )
