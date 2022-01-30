@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/it-incubator__ignat-tasks/static/css/main.6bc98113.chunk.css",
-    "main.js": "/it-incubator__ignat-tasks/static/js/main.f210002a.chunk.js",
-    "main.js.map": "/it-incubator__ignat-tasks/static/js/main.f210002a.chunk.js.map",
-    "runtime-main.js": "/it-incubator__ignat-tasks/static/js/runtime-main.682b9a59.js",
-    "runtime-main.js.map": "/it-incubator__ignat-tasks/static/js/runtime-main.682b9a59.js.map",
-    "static/js/2.b871daad.chunk.js": "/it-incubator__ignat-tasks/static/js/2.b871daad.chunk.js",
-    "static/js/2.b871daad.chunk.js.map": "/it-incubator__ignat-tasks/static/js/2.b871daad.chunk.js.map",
+    "main.css": "/it-incubator__ignat-tasks/static/css/main.01186af4.chunk.css",
+    "main.js": "/it-incubator__ignat-tasks/static/js/main.ff579fd0.chunk.js",
+    "main.js.map": "/it-incubator__ignat-tasks/static/js/main.ff579fd0.chunk.js.map",
+    "runtime-main.js": "/it-incubator__ignat-tasks/static/js/runtime-main.200e2b36.js",
+    "runtime-main.js.map": "/it-incubator__ignat-tasks/static/js/runtime-main.200e2b36.js.map",
+    "static/js/2.7eeaf91f.chunk.js": "/it-incubator__ignat-tasks/static/js/2.7eeaf91f.chunk.js",
+    "static/js/2.7eeaf91f.chunk.js.map": "/it-incubator__ignat-tasks/static/js/2.7eeaf91f.chunk.js.map",
     "index.html": "/it-incubator__ignat-tasks/index.html",
-    "static/css/main.6bc98113.chunk.css.map": "/it-incubator__ignat-tasks/static/css/main.6bc98113.chunk.css.map",
-    "static/js/2.b871daad.chunk.js.LICENSE.txt": "/it-incubator__ignat-tasks/static/js/2.b871daad.chunk.js.LICENSE.txt",
+    "static/css/main.01186af4.chunk.css.map": "/it-incubator__ignat-tasks/static/css/main.01186af4.chunk.css.map",
+    "static/js/2.7eeaf91f.chunk.js.LICENSE.txt": "/it-incubator__ignat-tasks/static/js/2.7eeaf91f.chunk.js.LICENSE.txt",
     "static/media/Error.372542d4.svg": "/it-incubator__ignat-tasks/static/media/Error.372542d4.svg",
     "static/media/Success.726ebe67.svg": "/it-incubator__ignat-tasks/static/media/Success.726ebe67.svg",
     "static/media/plus.f21a9921.png": "/it-incubator__ignat-tasks/static/media/plus.f21a9921.png",
     "static/media/preloader.86e365cf.svg": "/it-incubator__ignat-tasks/static/media/preloader.86e365cf.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.682b9a59.js",
-    "static/js/2.b871daad.chunk.js",
-    "static/css/main.6bc98113.chunk.css",
-    "static/js/main.f210002a.chunk.js"
+    "static/js/runtime-main.200e2b36.js",
+    "static/js/2.7eeaf91f.chunk.js",
+    "static/css/main.01186af4.chunk.css",
+    "static/js/main.ff579fd0.chunk.js"
   ]
 }
