@@ -1,28 +1,37 @@
 import React, {useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
-import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
-
+import {Slider} from "./common/Slider/Slider";
+import './HW11.css'
 
 function HW11() {
-   const [value1, setValue1] = useState(0)
-   const [value2, setValue2] = useState(100)
-   const onChangeRange = (value: number) => setValue1(value)
+
+   const [sliderMin, setSliderMin] = useState(0);
+   const [sliderMax, setSliderMax] = useState(0);
+   const setSliderMinCallback = (value: number) => {
+      sliderMin <= sliderMax && setSliderMin(value)
+   }
    return (
       <div>
-         <h2>homeworks 10</h2>
+         <h2>homeworks 11</h2>
 
          {/*should work (должно работать)*/}
-         <div>
-            <span>{value1}</span>
-            <SuperRange value={value1} onChangeRange={onChangeRange}
-               // сделать так чтоб value1 изменялось
+         <div className={"range"}>
+            <span className={"span"}>{sliderMin}</span>
+            <SuperRange value={sliderMin} onChangeRange={setSliderMinCallback}
             />
          </div>
 
-         <div>
-            <span>{value1}</span>
-
-            <span>{value2}</span>
+         <div className={"doubleRange"}>
+            <span className={"span"}>{sliderMin}</span>
+            <Slider startMin={0}
+                     startMax={100}
+                     thumbsize={10}
+                     minVal={sliderMin}
+                     maxVal={sliderMax}
+                     setMinVal={setSliderMin}
+                     setMaxVal={setSliderMax}
+            />
+            <span className={"span"}>{sliderMax}</span>
          </div>
 
          <hr/>
