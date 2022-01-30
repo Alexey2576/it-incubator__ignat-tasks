@@ -1,3 +1,19 @@
+.HW12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.super_block {
+    margin: 15px;
+}
+
+.text {
+    font-size: 27px;
+    padding: 30px;
+}
+
 .dark {
     background: dimgrey;
 }

@@ -14,7 +14,8 @@ export const AlternativeSuperRadio: React.FC<AlternativeSuperRadioType> = (
       value, name,
       options,
       onChange,
-      onChangeOptions
+      onChangeOptions,
+      ...restProps
    }
 ) => {
 
@@ -29,9 +30,10 @@ export const AlternativeSuperRadio: React.FC<AlternativeSuperRadioType> = (
             <input type="radio"
                    className="rad-input"
                    name={name}
-                   value={value}
-                   checked
-                   onChange={onChangeOptionsHandler}/>
+                   value={o}
+                   onChange={onChangeOptionsHandler}
+                   {...restProps}
+            />
             <div className="rad-design"> </div>
             <div className="rad-text">{o}</div>
          </label>
