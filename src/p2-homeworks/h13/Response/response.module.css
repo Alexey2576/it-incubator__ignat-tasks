@@ -1,0 +1,48 @@
+.response {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.title {
+    margin: 10px 0;
+}
+
+.response_message {
+    width: 100%;
+    border: 2px solid #031d34;
+}
+
+.message_block {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-bottom: 2px solid #031d34;
+}
+.message_block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.message {
+    font-size: 20px;
+    font-weight: 700;
+    width: 30%;
+}
+
+.text {
+    font-size: 18px;
+    width: 80%;
+
+}
+
+.error {
+    background-color: #f55656;
+}
+
+.not_error {
+    background-color: #54ce54;
+}
